@@ -29,7 +29,7 @@ The PAML software is employed to carry out maximum likelihood-based phylogenetic
 ## **Required Programs**
 Make sure you have the following programs installed before running the pipeline:
 
-TranslatorX: Used for aligning nucleotide sequences.
-MAFFT: Employed for sequence alignment.
-pal2nal: Utilized to convert amino acid alignments to codon alignments.
-PAML (Phylogenetic Analysis by Maximum Likelihood): Used for detecting positive selection in genes.
+- TranslatorX: Used for aligning nucleotide sequences.
+- MAFFT: Employed for sequence alignment.
+- pal2nal: Utilized to convert amino acid alignments to codon alignments.
+- PAML (Phylogenetic Analysis by Maximum Likelihood): Used for detecting positive selection in genes.
