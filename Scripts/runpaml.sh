@@ -1,5 +1,20 @@
 #!/bin/bash
 
+# Function to preprocess gene sequences before PAML analysis
+run_preprocessing() {
+  echo "Preprocessing gene sequences..."
+  
+  # Run cds_rename.py to rename headers
+  ./~/selection/scripts/cds_rename.py
+  
+  # Run gene_cat.py to extract the specified gene from each species
+  ./~/selection/scripts/gene_cat.py
+  
+  # Run one_line.py to convert FASTA format
+  ./~/selection/scripts/one_line.py
+
+  echo "Gene preprocessing completed."
+}
 # Function to create alignments
 run_translatorx() {
   echo "Running TranslatorX and MAFFT..."
@@ -92,6 +107,7 @@ fi
 gene_name="$1"
 
 # Call functions in sequence
+run_preprocessing
 run_translatorx
 run_gap_removal
 run_paml_prepare
