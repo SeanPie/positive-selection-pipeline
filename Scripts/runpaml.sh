@@ -15,6 +15,7 @@ run_preprocessing() {
 
   echo "Gene preprocessing completed."
 }
+
 # Function to create alignments
 run_translatorx() {
   echo "Running TranslatorX and MAFFT..."
