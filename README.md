@@ -9,7 +9,6 @@ This repository contains a pipeline designed to explore genes under positive sel
 - Peromyscus crinitus
 - Neotoma lepida
 - Onychomys torridus
-- 
 
 ## **Purpose**
 The main purpose of this project is to identify genes that have undergone positive selection in desert-adapted rodent species as compared to their non-desert-adapted counterparts. Positive selection often indicates that specific genes have experienced strong evolutionary pressures, potentially linked to adaptation to arid environments.
