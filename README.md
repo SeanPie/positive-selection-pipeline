@@ -27,7 +27,7 @@ The aligned sequences are then converted into codon alignments using pal2nal. Th
 The PAML software is employed to carry out maximum likelihood-based phylogenetic analysis. The goal is to identify genes that show evidence of positive selection, indicating potential adaptation to desert environments.
 
 ## **Required Programs**
-Make sure you have the following programs installed before running the pipeline:
+The following programs must be installed before running the pipeline:
 
 - TranslatorX: Used for aligning nucleotide sequences.
 - MAFFT: Employed for sequence alignment.
