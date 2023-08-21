@@ -13,15 +13,19 @@ run_translatorx() {
   mafft --auto translatorx_res.aaseqs.fasta > translatorx_res.aa_ali.fasta
   mv translatorx_res.aa_ali.fasta aa_ali.fasta
   
-  #
+  
   translatorx -i ${gene_name}_ol.fna -p F -a aa_ali.fasta
   cp translatorx_res.nt_ali.fasta ${gene_name}_mafft_aln.fna
   cp translatorx_res.aa_ali.fasta ${gene_name}_mafft_aln.faa
   cd ..
+
+  # Run for last manual check on alignment quality of amino acids and nucleotides
+  pal2nal.pl mvd_mafft_aln.faa mvd_mafft_aln.fna -output fasta > p2n_check.fasta
+  
   echo "Alignment completed."
 }
 
-# Function to remove gaps
+# Function to remove same gaps from all gene sequences 
 run_gap_removal() {
   echo "Running gap removal..."
   ./~/selection/scripts/remove_gap.py
@@ -30,7 +34,7 @@ run_gap_removal() {
 
 # Function to generate gene tree for PAML
 run_paml_prepare() {
-  # run_phyl script in order to
+  # run_phyl script to convert fast file to PHYL file
   ./~/selection/run_phyl.sh
   
   # Generate a gene tree using RAxML
